@@ -74,6 +74,27 @@ else
     echo -e "${CYAN}[*] Fish ist bereits die Standard-Shell.${NC}\n"
 fi
 
+# --- 6. CUSTOM TOOLS INSTALLIEREN (NETWORK-SCANNER) ---
+echo -e "${YELLOW}[*] Installiere Sandro's Network Scanner...${NC}"
+SCANNER_DIR="$HOME/projects/network-scanner"
+
+# Prüfen, ob der Ordner schon existiert, um Fehler bei doppeltem Ausführen zu vermeiden
+if [ ! -d "$SCANNER_DIR" ]; then
+    mkdir -p ~/projects
+    git clone https://github.com/Sandroexe/network-scanner.git "$SCANNER_DIR"
+    
+    # In den Ordner wechseln und die Installation starten
+    cd "$SCANNER_DIR"
+    chmod +x install.sh
+    echo -e "${CYAN}[*] Führe Installer für den Network Scanner aus...${NC}"
+    sudo ./install.sh
+    cd - > /dev/null # Geht leise zurück ins vorherige Verzeichnis
+    
+    echo -e "${GREEN}[+] Network Scanner erfolgreich installiert!${NC}\n"
+else
+    echo -e "${CYAN}[*] Network Scanner ist bereits vorhanden. Überspringe Klonen...${NC}\n"
+fi
+
 echo -e "${GREEN}=======================================${NC}"
 echo -e "${GREEN} 🎉 System-Setup erfolgreich beendet!  ${NC}"
 echo -e "${GREEN}=======================================${NC}"

@@ -25,7 +25,7 @@ Führe diese Befehle auf einem frischen System aus, um den Setup-Prozess zu star
 
 ```bash
 # 1. Repo klonen
-git clone [https://github.com/Sandroexe/system-setup.git](https://github.com/Sandroexe/system-setup.git)
+git clone https://github.com/Sandroexe/system-setup.git
 cd system-setup
 
 # 2. Ausführbar machen und starten

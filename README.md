@@ -41,7 +41,6 @@ chmod +x setup.sh
 *(Ziehe hier später einen Screenshot rein, wie das Skript im Terminal durchläuft, oder einen Screenshot von deinem fertigen Desktop/Fastfetch!)*
 
 ## 🛠️ Geplante Updates
-
 - [ ] Modulare Installation (Abfrage: "Möchtest du auch Python-Tools installieren? Y/N")
 - [ ] SSH-Keys automatisch generieren
-- [ ] Installation meines Custom Network-Scanners integrieren
+- [x] Installation meines Custom Network-Scanners integrieren
